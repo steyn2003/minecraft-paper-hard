@@ -6,7 +6,7 @@ services:
     environment:
       EULA: "TRUE"
       TYPE: "PAPER"
-      VERSION: "1.21.3"
+      VERSION: "1.21.10"
       DIFFICULTY: "hard"
       MEMORY: "8G"
       USE_AIKAR_FLAGS: "true"
