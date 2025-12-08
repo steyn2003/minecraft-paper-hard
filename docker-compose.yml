@@ -4,20 +4,20 @@ services:
     tty: true
     stdin_open: true
     environment:
-      EULA: "TRUE"              # Must be TRUE to start
-      TYPE: "PAPER"             # High-performance server jar
-      VERSION: "1.21.10"         # Or leave out for latest Paper
-      DIFFICULTY: "hard"        # peaceful, easy, normal, hard
-      MEMORY: "8G"              # You have 16G total → 8G is safe
-      USE_AIKAR_FLAGS: "true"   # Better JVM flags
-      VIEW_DISTANCE: "10"       # 8–10 is usually good
-      SIMULATION_DISTANCE: "8"  # Lower = less CPU usage
-      ONLINE_MODE: "TRUE"       # Set FALSE only for cracked servers
+      EULA: "TRUE"
+      TYPE: "PAPER"
+      VERSION: "1.21.3"
+      DIFFICULTY: "hard"
+      MEMORY: "8G"
+      USE_AIKAR_FLAGS: "true"
+      VIEW_DISTANCE: "10"
+      SIMULATION_DISTANCE: "8"
+      ONLINE_MODE: "TRUE"
       ENABLE_COMMAND_BLOCK: "true"
     ports:
       - "25565:25565"
     volumes:
-      - /srv/minecraft/paper-hard:/data   # <-- all data stored here
+      - /srv/minecraft/paper-hard:/data
     restart: unless-stopped
     networks:
       - dokploy-network
